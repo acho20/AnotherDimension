@@ -7,5 +7,13 @@ public class ArrayOps{
   return x;
  }
 
+ public static int largest(int[] arr){
+  int x = 0;
+  for (int i = 0; i <arr.length; i++){
+   x = Math.max(x, arr[i]);
+  }
+  return x;
+ }
+
 
 }
