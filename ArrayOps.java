@@ -53,7 +53,7 @@ public class ArrayOps{
   int[] x = new int[matrix.length]; 
   x = sumRows(matrix);
   for(int i = 0; i < matrix.length; i++){
-   if (matrix[i] != matrix[0]){
+   if (x[i] != x[0]){
     return false;
    }
   }
