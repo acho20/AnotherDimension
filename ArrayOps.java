@@ -14,7 +14,7 @@ public class ArrayOps{
   }
   return x;
  }
- 
+
  public static int[] sumRows(int[][] matrix){
   int[] arr = new int[matrix.length];
   for(int i = 0; i < matrix.length; i++){
@@ -35,7 +35,7 @@ public class ArrayOps{
   return sum(sumRows(matrix));
  }
 
- 
+
  public static int[] sumCols(int[][] matrix){
   int[] x = new int[matrix[0].length];
   int y = 0;
@@ -50,7 +50,7 @@ public class ArrayOps{
  }
 
  public static boolean isRowMagic(int[][] matrix){
-  int[] x = new int[matrix.length]; 
+  int[] x = new int[matrix.length];
   x = sumRows(matrix);
   for(int i = 0; i < matrix.length; i++){
    if (x[i] != x[0]){
@@ -61,16 +61,16 @@ public class ArrayOps{
  }
 
  public static boolean isColMagic(int[][] matrix){
-  int[] x = new int[matrix.length]; 
+  int[] x = new int[matrix[0].length];
   x = sumCols(matrix);
-  for(int i = 0; i < matrix.length; i++){
+  for(int i = 0; i < matrix[0].length; i++){
    if (x[i] != x[0]){
     return false;
    }
   }
   return true;
- } 
- 
+ }
+
  public static boolean isLocationMagic(int[][] matrix, int row, int col){
   int x = sum(matrix[row]);
   int y = 0;
@@ -79,5 +79,5 @@ public class ArrayOps{
   }
   return x==y;
  }
- 
+
 }
